@@ -1,6 +1,6 @@
 # What is Artmos Pro?
 
-Artmos Pro is a vector based comprehensive painting tool designed for creating high quality educational videos.
+Artmos Pro is a vector-based comprehensive painting tool designed for creating high quality educational videos.
 
 # Building
 
