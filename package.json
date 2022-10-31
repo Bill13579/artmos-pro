@@ -1,0 +1,20 @@
+{
+  "name": "artmos",
+  "productName": "Artmos",
+  "version": "1.0.0",
+  "description": "A fully-featured and comprehensive painting tool for painting anything.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "paint",
+    "art",
+    "draw"
+  ],
+  "author": "Bill Kudo <bluesky42624@gmail.com> (https://www.ideaacademy.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.7"
+  }
+}

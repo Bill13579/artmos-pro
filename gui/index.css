@@ -1,0 +1,307 @@
+* {
+    font-family: Helvetica, Arial, Sans-Serif;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+/* Paging System */
+#pages {
+    height: 100%;
+}
+#pages > .page:not(.selected-page) {
+     display: none;
+}
+.selected-page {
+    display: block;
+}
+.page {
+    background-color: #f4f4f4;
+    height: 100%;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+}
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+/* END */
+
+#middle-content-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 91%;
+}
+#drawing-canvas-wrapper, #left-panel {
+    display: inline-block;
+}
+#drawing-tools {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding-top: 1px;
+    padding-bottom: 6px;
+    padding-left: 6.4%;
+    padding-right: 2px;
+}
+#drawing-tools .vertical-seperator {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#left-panel {
+    width: 60px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 1px;
+    padding-right: 6px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#custom-predefined-colors {
+    margin-top: 10px;
+}
+#custom-predefined-colors .color-button {
+    margin-bottom: 3px;
+}
+.toolbar-button {
+    margin-left: 1px;
+    background-color: #7e7e7e;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    width: 15px;
+    height: 15px;
+}
+.toolbar-button:active {
+    background-color: #959595;
+}
+#undo-btn {
+    -webkit-mask-image: url(icons/undo.svg);
+}
+#redo-btn {
+    -webkit-mask-image: url(icons/redo.svg);
+}
+#del-btn {
+    -webkit-mask-image: url(icons/delete.svg);
+}
+#pen-width-setter {
+    width: 200px;
+}
+#drawing-canvas-wrapper {
+    background-color: #cecece;
+    width: 97.5%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+}
+#drawing-canvas {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0.8px 0.8px 2px 0 #686868;
+}
+#color-palette {
+    border-radius: 2px;
+    box-shadow: 2px 2px 2.5px 0 #686868;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8.5px;
+    padding-bottom: 8.5px;
+    background-color: #e0e0e0;
+}
+.color-showcase-button-preview, .color-showcase-button-label {
+    pointer-events: none;
+}
+.modal-panel {
+    position: absolute;
+    display: inline-block;
+    background-color: #fefefe;
+    box-shadow: 2px 2px 9px 0 #686868;
+    top: 30%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1;
+}
+path {
+    pointer-events: none;
+}
+.undid {
+    display: none;
+}
+#canvas-size-setter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#canvas-width-input, #canvas-height-input {
+    vertical-align: middle;
+    width: 25vw;
+    height: 27px;
+    font-size: 17px;
+    border-radius: 2px;
+    margin-right: 7px;
+}
+#canvas-size-done-btn {
+    vertical-align: middle;
+    color: #ffffff;
+    width: 14vw;
+    height: 27px;
+    font-size: 19px;
+    text-align: center;
+    line-height: 27px;
+}
+.color-button {
+    width: 32px;
+    height: 32px;
+}
+#color-picker-btn {
+    margin-bottom: 10px;
+}
+
+/* UI Elements */
+.button {
+    border-radius: 2px;
+    user-select: none;
+    cursor: pointer;
+    background-image: linear-gradient(#00b6ff, #0087ff);
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.button:active {
+    background-image: linear-gradient(#0087ff, #00b6ff);
+}
+.color-showcase-button {
+    border-radius: 2px;
+    user-select: none;
+    cursor: pointer;
+    background-image: linear-gradient(#e4e4e4, #dddddd);
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2.8px;
+    padding-bottom: 3.6px;
+    width: 58px;
+    height: 100%;
+    margin-right: 3px;
+}
+.color-showcase-button.selected {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0087ff;
+}
+.color-showcase-button:active {
+    background-image: linear-gradient(#dddddd, #e4e4e4);
+}
+.color-showcase-button-preview {
+    width: calc(100% - 7px);
+    height: calc(70% - 2.5px);
+    margin-left: 3.5px;
+    margin-right: 3.5px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    border-radius: 2px;
+}
+.color-showcase-button-label {
+    display: inline-block;
+    font-size: 10px;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+.color-button {
+    user-select: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    box-shadow: 0.5px 0.5px 1.1px 0 #a5a5a5;
+}
+.color-button.selected {
+    border-color: #ffffff;
+    box-shadow:  1.6px 1.6px 5px 0 #a5a5a5;
+}
+.light-button {
+    user-select: none;
+    cursor: pointer;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.input-field {
+    border-radius: 2px;
+    -webkit-transition: all 0.25s ease-in-out;
+    outline: none;
+    border: 1px solid #dddddd;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.input-field:focus {
+    box-shadow: 0 0 15px #00b6ff;
+    border: 1px solid #00b6ff;
+}
+.slider {
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 6px;
+    height: 10px;
+    background-color: #dddddd;
+}
+.slider:hover, .slider:active {
+    opacity: 0.85;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-image: linear-gradient(#00c3ff, #00aeff);
+    appearance: none;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+label {
+    font-size: 16px;
+    user-select: none;
+}
+.inline-label {
+    font-size: 16px;
+    display: inline;
+    padding-right: 3px;
+}
+.double-line-label {
+    font-size: 15px;
+    display: block;
+    padding-bottom: 3.5px;
+}
+.vertical-seperator {
+    width: 1px;
+    height: 100%;
+    background-color: #6e6e6e;
+}
+.horizontal-seperator {
+    width: 100%;
+    height: 1px;
+    background-color: #6e6e6e;
+}
+/* END */

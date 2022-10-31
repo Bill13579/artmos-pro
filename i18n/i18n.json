@@ -1,0 +1,13 @@
+{
+    "definitions": [
+        {
+            "compatibleLocales": ["en", "en-AU", "en-CA", "en-GB", "en-NZ", "en-US", "en-ZA"],
+            "i18n": "en.json"
+        },
+        {
+            "compatibleLocales": ["ja"],
+            "i18n": "ja.json"
+        }
+    ],
+    "default": 0
+}

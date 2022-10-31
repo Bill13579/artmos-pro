@@ -1,0 +1,25 @@
+{
+    "welcome-message": "Welcome to Artmos!",
+    "done": "Done",
+    "canvas-width-input-label": "New Canvas Width:",
+    "canvas-height-input-label": "New Canvas Height:",
+    "pen-width-setter-label": "Pen Width ",
+    "save-dialog-confirmation-label": "Save",
+    "open-dialog-confirmation-label": "Open",
+    "background-color-btn-label": "Background",
+    "foreground-color-btn-label": "Tool",
+    "menu": {
+        "save": "Save",
+        "save-as": "Save As",
+        "open": "Open",
+        "undo": "Undo",
+        "redo": "Redo",
+        "clear": "Clear All",
+        "change-canvas-size": "Change Canvas Size"
+    },
+    "titles": {
+        "undo-btn": "Undo",
+        "redo-btn": "Redo",
+        "del-btn": "Clear All"
+    }
+}

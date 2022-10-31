@@ -1,0 +1,20 @@
+{
+    "welcome-message": "Artmosへようこそ！",
+    "done": "完了",
+    "canvas-width-input-label": "広さ：",
+    "canvas-height-input-label": "高さ：",
+    "pen-width-setter-label": "太さ ",
+    "menu": {
+        "save": "保存",
+        "save-as": "名前を付けて保存",
+        "undo": "アンドゥ",
+        "redo": "リドゥ",
+        "clear": "全て消す",
+        "change-canvas-size": "サイズを変える"
+    },
+    "titles": {
+        "undo-btn": "アンドゥ",
+        "redo-btn": "リドゥ",
+        "del-btn": "全て消す"
+    }
+}
